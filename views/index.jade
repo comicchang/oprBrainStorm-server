@@ -1,5 +1,37 @@
 extends layout
 
 block content
-    h1= title
-    p Welcome to #{title}
+    div.jumbotron.text-center
+        h1= title
+        p Welcome to #{title}
+    div.container.row
+        table.table.table-hover.table-bordered.table-sm#myTable
+            thead
+                tr
+                    th(scope="col") Timestamp
+                    th title
+                    th description
+                    th streetAddress
+                    th lat
+                    th lng
+                    th author
+                    th stars
+                    th duplicate
+                    th reasons
+                    th JSON
+            tbody
+                each doc in docs
+                    tr
+                        th=doc.timestamp
+                        td=doc.title
+                        td=doc.description
+                        td=doc.streetAddress
+                        td=doc.lat
+                        td=doc.lng
+                        td=doc.author
+                        td=doc.stars
+                        td=doc.duplicate
+                        td=doc.reasons
+                        td=doc.JSON
+    //script.
+    //    $(document).ready(function () {$('#myTable').DataTable({"scrollX": true, "scrollY": true});});

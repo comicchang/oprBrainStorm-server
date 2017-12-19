@@ -1,9 +1,14 @@
 var express = require('express');
 var router = express.Router();
+var oprRecord = require('../model.js');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Express'});
+    oprRecord.find({}, function (err, docs) {
+        console.log (docs);
+        res.render('index', {title: 'title', docs: docs});
+    });
+
 });
 
 module.exports = router;
