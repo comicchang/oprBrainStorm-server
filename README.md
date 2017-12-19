@@ -1,8 +1,5 @@
 # oprBrainStorm-server
 
-download 'OPR - Sheet1.csv' file
-run
-```
-npm install
-npm start
-```
+custom oprBrainStorm server script.
+
+未完成
